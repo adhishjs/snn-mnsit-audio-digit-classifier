@@ -39,7 +39,6 @@ https://www.kaggle.com/datasets/sripaadsrinivasan/audio-mnist/data
 
 
 
-
 4. 🏁 Run Inference
    To test the model on random 10 audio samples:
 
