@@ -73,3 +73,9 @@ You can record new audio with audio_rec.py and test it live.
 
 🧠 Inspiration
    This project blends neuroscience with modern machine learning — showing how SNNs can interpret temporal signals like speech.
+
+
+
+Made by Adhish J S
+For Contact,
+adhishjs05@gmail.com 
