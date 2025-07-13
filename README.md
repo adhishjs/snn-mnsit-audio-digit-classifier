@@ -5,7 +5,7 @@ This project implements a Spiking Neural Network (SNN) to classify spoken digits
 ## 📁 Project Structure
 
 <pre>
-```bash
+
 AUDIO/
 ├── DATASET/              # (Optional) Original dataset folder
 ├── DATASET_TEST/         # Test samples (preprocessed)
@@ -16,9 +16,9 @@ AUDIO/
 ├── encoder.py            # Audio to spike encoding logic
 ├── loading.py            # Utility to load model checkpoints
 ├── saving.py             # Utility to save model checkpoints
-├── audio_rec.py          # Optional audio recording helper
+├── audio_rec.py          # Optional audio recording
 ├── parameters.pt         # Trained model parameters
-```
+
 </pre>
 
 🚀 How to Run
@@ -33,7 +33,6 @@ pip install torch torchaudio numpy
 2. 🎧 Dataset
    Ensure you have the preprocessed MFCC dataset in the DATASET_TEST/ folder. Each file should be an audio sample corresponding to a digit from 0 to 9.
 
-If starting from raw audio, implement preprocessing in ds_loader.py.
 
 3. 🏁 Run Inference
    To test the model on random 10 audio samples:
@@ -51,7 +50,9 @@ python train_digit.py
 
 The trained model will be saved as parameters.pt.
 
+
 🔍 Model Overview
+<pre>
 The model is a SimpleSNN:
 
 Input: MFCC features → Spike Trains
@@ -61,19 +62,9 @@ Architecture: Feedforward spiking layers
 Activation: Leaky Integrate-and-Fire (LIF) dynamics
 
 Output: 10-class softmax layer (digit prediction)
+</pre>
 
-🧪 Sample Output
-The script prints 10 random selected test files and their predicted digits:
 
-python-repl
-Copy
-Edit
-Selected Files:
-file_7.wav
-file_3.wav
-...
-Prediction Accuracy: 95%
-📌 Notes
 The model uses a biologically inspired temporal encoding mechanism.
 
 encoder.py handles converting audio features into spike trains.
@@ -81,4 +72,4 @@ encoder.py handles converting audio features into spike trains.
 You can record new audio with audio_rec.py and test it live.
 
 🧠 Inspiration
-This project blends neuroscience with modern machine learning — showing how SNNs can interpret temporal signals like speech.
+   This project blends neuroscience with modern machine learning — showing how SNNs can interpret temporal signals like speech.
