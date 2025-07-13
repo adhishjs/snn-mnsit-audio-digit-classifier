@@ -33,8 +33,14 @@ pip install torch torchaudio numpy
 2. 🎧 Dataset
    Ensure you have the preprocessed MFCC dataset in the DATASET_TEST/ folder. Each file should be an audio sample corresponding to a digit from 0 to 9.
 
+For Dataset,
 
-3. 🏁 Run Inference
+https://www.kaggle.com/datasets/sripaadsrinivasan/audio-mnist/data
+
+
+
+
+4. 🏁 Run Inference
    To test the model on random 10 audio samples:
 
 ```bash
